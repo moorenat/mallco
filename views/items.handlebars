@@ -1,0 +1,46 @@
+<h3>Add Store:</h3>
+
+
+<form name="add_item_form" action="/items" method="POST">
+    <div class="form-group">
+        <label>Item Name</label>
+        <input type="text" class="form-control" id="name" name="name">
+    </div>
+    <div class="form-group">
+        <label>Item Quantity</label>
+        <input type="text" class="form-control" id="quantity" name="quantity">
+    </div>
+    <div class="form-group">
+        <label>Item Price</label>
+        <input type="text" class="form-control" id="price" name="price">
+    </div>
+    <input type="submit" value="Submit">
+</form>
+
+<br />
+
+
+<h3>Items:</h3>
+<table>
+    <thead>
+        <th>Item_id</th>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+
+
+    </thead>
+    <tbody>
+        {{#each items}}
+        <tr>
+            <td>{{item_id}}</td>
+            <td>{{name}}</td>
+            <td>{{quantity}}</td>
+            <td>{{price}}</td>
+
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+</html>

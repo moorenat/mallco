@@ -1,0 +1,40 @@
+<html>
+{{#each foo}}
+{{this}}
+{{/each}}
+
+
+
+<h3>Add Store:</h3>
+
+
+<form name="add_store_form" action="/stores" method="POST">
+    <div class="form-group">
+        <label>Store Name</label>
+        <input type="text" class="form-control" id="store_name" name="name">
+    </div>
+
+    <input type="submit" value="Submit">
+</form>
+<br />
+
+
+<h3>Stores:</h3>
+<table>
+    <thead>
+        <th>store_id</th>
+        <th>name </th>
+
+    </thead>
+    <tbody>
+        {{#each stores}}
+        <tr>
+            <td>{{name}}</td>
+            <td>{{store_id}}</td>
+
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+</html>

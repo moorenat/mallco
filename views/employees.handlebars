@@ -1,0 +1,62 @@
+<html>
+{{#each foo}}
+{{this}}
+{{/each}}
+
+
+
+
+
+<h3>Add Employee:</h3>
+
+
+<form name="add_employee_form" action="/employees" method="POST">
+
+
+    <div class="form-group">
+        <label>First Name</label>
+        <input type="text" class="form-control" id="first_name" name="first_name">
+    </div>
+    <div class="form-group">
+        <label>Last Name</label>
+        <input type="text" class="form-control" id="last_name" name="last_name">
+    </div>
+    <div class="form-group">
+        <label>Store</label>
+        <select name="store_id">
+            {{#each stores}}
+            <option value="{{id}}">{{name}}</option>
+            {{/each}}
+        </select><br>
+        {{!-- <input type="text" class="form-control" id="store_id" name="store_id"> --}}
+    </div>
+
+    <input type="submit" value="Submit">
+</form>
+<br />
+
+
+<h3>Employees:</h3>
+<table>
+    <thead>
+        <th>ID</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Store</th>
+    </thead>
+    <tbody>
+        {{#each employees}}
+        <tr>
+            <td>{{employee_id}}</td>
+            <td>{{first_name}}</td>
+            <td>{{last_name}}</td>
+            <td>{{store}}</td>
+
+            <td><a href="/employees/{{employee_id}}">Update</a></td>
+            <td><a href="/employees/delete/{{employee_id}}">Delete</a></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+</html>

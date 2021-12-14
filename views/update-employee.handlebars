@@ -1,0 +1,15 @@
+<html>
+<h1>Update {{employee.first_name}} {{employee.last_name}}:</h1>
+<form id="update-employee" action="/employees" method="post">
+    First name: <input type="text" name="first_name" value="{{employee.first_name}}"><br>
+    Last name: <input type="text" name="last_name" value="{{employee.last_name}}"><br>
+    Store: <select name="store" id="store-selector">
+        {{#each stores}}
+        <option value="{{id}}">{{name}}</option>
+        {{/each}}
+    </select><br>
+</form>
+<button onclick="updateemployee({{employee.id}})">Update</button>
+<script defer>selectStore({{ employee.store }});</script>
+
+</html>

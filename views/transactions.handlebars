@@ -1,0 +1,76 @@
+<html>
+{{#each foo}}
+{{this}}
+{{/each}}
+
+
+
+
+<h3>Add Transaction:</h3>
+<h4>Create a Transaction with Date, Employee and Store. Then navigate to Transaction_Items by clicking update on the
+    newly created Transaction and
+    input the items for
+    the transaction.</h4>
+
+<form name="add_transaction_form" action="/transactions" method="POST">
+
+
+    <div class="form-group">
+        <label>Date</label>
+        <input type="date" class="form-control" id="date" name="date">
+    </div>
+    <div class="form-group">
+        <label>Employee</label>
+        <select name="employee_id">
+            {{#each employees}}
+            <option value="{{id}}">{{employee}}</option>
+            {{/each}}
+        </select><br>
+        {{!-- <input type="text" class="form-control" id="store_id" name="store_id"> --}}
+    </div>
+    <div class="form-group">
+        <label>Store</label>
+        <select name="store_id">
+            {{#each stores}}
+            <option value="{{id}}">{{name}}</option>
+            {{/each}}
+        </select><br>
+        {{!-- <input type="text" class="form-control" id="store_id" name="store_id"> --}}
+    </div>
+    <div class="form-group">
+        <label>Total</label>
+        <input type="text" class="form-control" id="total" name="total">
+    </div>
+
+    <input type="submit" value="Submit">
+</form>
+<br />
+
+
+<h3>Transactions:</h3>
+<table>
+    <thead>
+        <th>Transaction_ID</th>
+        <th>Date</th>
+        <th>Total</th>
+        <th>Employee</th>
+        <th>Store</th>
+    </thead>
+    <tbody>
+        {{#each transactions}}
+        <tr>
+            <td>{{transaction_id}}</td>
+            <td>{{date}}</td>
+            <td>{{total}}</td>
+            <td>{{employee}}</td>
+            <td>{{store}}</td>
+
+
+
+            <td><a href="/transactions/delete/{{transaction_id}}">Delete</a></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+</html>

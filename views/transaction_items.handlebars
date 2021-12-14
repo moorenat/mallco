@@ -1,0 +1,49 @@
+<html>
+
+
+
+<h3>Add Transaction_Items:</h3>
+<h4>Currently only one of each item is allowed per transaction.</h4>
+
+
+<form name="add_transaction_item" action="/transaction_items" method="POST">
+    <div class="form-group">
+        <label>Transaction</label>
+        <select name="transaction_id">
+            {{#each transactions}}
+            <option value="{{id}}">{{id}}</option>
+            {{/each}}
+        </select><br>
+    </div>
+    <div class="form-group">
+        <label>Item</label>
+        <select name="item_id">
+            {{#each items}}
+            <option value="{{id}}">{{name}}</option>
+            {{/each}}
+        </select><br>
+    </div>
+
+    <input type="submit" value="Submit">
+</form>
+<br />
+
+
+<h3>Transaction_Item:</h3>
+<table>
+    <thead>
+        <th>Transaction</th>
+        <th>Item</th>
+    </thead>
+    <tbody>
+        {{#each transaction_items}}
+        <tr>
+            <td>{{transaction_id}}</td>
+            <td>{{item_id}}</td>
+
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+</html>

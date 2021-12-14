@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Items</title>
+</head>
+
+<body>
+    <div class="container">
+        <ul class="navbar">
+            <li class="active"><a href="../index.html">Home</a></li>
+            <li class="nav"><a href="#Transactions">Transactions</a></li>
+            <li class="nav"><a href="Employees.html">Employees</a></li>
+            <li class=" nav"><a href="Items.html">Items</a></li>
+            <li class="nav"><a href="Stores.html">Stores</a></li>
+            <li class="nav"><a href="Store_items.html">Store_items</a></li>
+            <li class="nav"><a href="Transaction_Items.html">Transaction_Items</a></li>
+        </ul>
+    </div>
+
+    <form name="add_item_form" id="add_item_form" method="post" action="/add_item" class="input_form">
+        <div class="form-group">
+            <label>Item Name</label>
+            <input type="name" class="form-control" id="item_name">
+        </div>
+        <div class="form-group">
+            <label>Quantity</label>
+            <input type="int" class="form-control" id="quantity">
+        </div>
+        <div class="form-group">
+            <label>Price</label>
+            <input type="price" class="form-control" id="price">
+            <div class="form-group">
+                <label>Item ID</label>
+                <input type="id" class="form-control" id="item_id" placeholder="If Searching">
+            </div>
+            <button type="submit" id="add_item" class="btn btn-primary">Add</button>
+            <button type="submit" id="delete_item" class="btn btn-primary">Delete</button>
+            <button type="submit" id="search_item" class="btn btn-primary">Search</button>
+    </form>
+    <br>
+    <br>
+
+    <div class="form_container">
+        <form name="items_form" id="items_form" method="post" action="/update_items" class="table_form">
+            <table class="db_table">
+                <thead>
+                    <tr>
+                        <th colspan="11">Items</th>
+                    </tr>
+                    <tr>
+                        <th></th>
+
+                        <th>item_id</th>
+
+                        <th>quantity</th>
+
+                        <th>name</th>
+
+                        <th>price</th>
+
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="items_tbody">
+
+                    <tr id="items_row-0">
+                        <td>
+                            <button class="items_editBtn">edit</button>
+                        </td>
+
+
+                        <td id="item_id>0" class="attribute-container">1</td>
+
+                        <td id="quantity>0" class="attribute-container">250</td>
+
+                        <td id="name>0" class="attribute-container">Bleach</td>
+
+                        <td id="price>0" class="attribute-container">$5.50</td>
+
+                        <td>
+                            <button class="item_deleteBtn">X</button>
+                            <input type="hidden" ,="" value="0" name="id">
+                        </td>
+                    </tr>
+
+                    <tr id="items_row-1">
+                        <td>
+                            <button class="items_editBtn">edit</button>
+                        </td>
+
+
+                        <td id="item_id>0" class="attribute-container">2</td>
+
+                        <td id="quantity>0" class="attribute-container">200</td>
+
+                        <td id="name>0" class="attribute-container">Apples</td>
+
+                        <td id="price>0" class="attribute-container">$1.00</td>
+
+                        <td>
+                            <button class="item_deleteBtn">X</button>
+                            <input type="hidden" ,="" value="0" name="id">
+                        </td>
+                    </tr>
+
+                    <tr id="items_row-2">
+                        <td>
+                            <button class="items_editBtn">edit</button>
+                        </td>
+
+
+                        <td id="item_id>0" class="attribute-container">3</td>
+
+                        <td id="quantity>0" class="attribute-container">520</td>
+
+                        <td id="name>0" class="attribute-container">Oranges</td>
+
+                        <td id="price>0" class="attribute-container">$1.50</td>
+
+                        <td>
+                            <button class="item_deleteBtn">X</button>
+                            <input type="hidden" ,="" value="0" name="id">
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>

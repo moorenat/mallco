@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store_items</title>
+</head>
+
+<body>
+    <div class="container">
+        <ul class="navbar">
+            <li class="active"><a href="../index.html">Home</a></li>
+            <li class=" nav"><a href="Transactions.html">Transactions</a></li>
+            <li class="nav"><a href="Employees.html">Employees</a></li>
+            <li class=" nav"><a href="Items.html">Items</a></li>
+            <li class="nav"><a href="Stores.html">Stores</a></li>
+            <li class="nav"><a href="#Store_items">Store_items</a></li>
+            <li class="nav"><a href="Transaction_Items.html">Transaction_Items</a></li>
+
+        </ul>
+    </div>
+    <div class="form_container">
+        <form name="Store_items_form" id="Store_items_form" method="post" action="/update_Store_items" class="table_form">
+            <table class="db_table">
+                <thead>
+                    <tr>
+                        <th colspan="11">Store_items</th>
+                    </tr>
+                    <tr>
+                        <th></th>
+
+                            <th>store_id</th>
+
+                            <th>item_id</th>
+                    
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="Store_items_tbody">
+                    
+                        <tr id="Store_items_row-0">
+                            <td>
+                                <button class="Store_items_editBtn">edit</button>
+                            </td>
+                            
+                            
+                                <td id="store_id>0" class="attribute-container">1</td>
+                            
+                                <td id="item_id>0" class="attribute-container">1</td>
+                            
+                            <td>
+                                <button class="item_deleteBtn">X</button>
+                                <input type="hidden" ,="" value="0" name="id">
+                            </td>
+                        </tr>
+                    
+                        <tr id="Store_items_row-1">
+                            <td>
+                                <button class="Store_items_editBtn">edit</button>
+                            </td>
+                            
+                            
+                                <td id="store_id>0" class="attribute-container">1</td>
+                            
+                                <td id="item_id>0" class="attribute-container">2</td>
+                            
+                            <td>
+                                <button class="item_deleteBtn">X</button>
+                                <input type="hidden" ,="" value="0" name="id">
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions</title>
+</head>
+
+<body>
+    <div class="container">
+        <ul class="navbar">
+            <li class="active"><a href="../index.html">Home</a></li>
+            <li class="nav"><a href="#Transactions">Transactions</a></li>
+            <li class="nav"><a href="Employees.html">Employees</a></li>
+            <li class=" nav"><a href="Items.html">Items</a></li>
+            <li class="nav"><a href="Stores.html">Stores</a></li>
+            <li class="nav"><a href="Store_items.html">Store_items</a></li>
+            <li class="nav"><a href="Transaction_Items.html">Transaction_Items</a></li>
+        </ul>
+    </div>
+
+    <form name="add_item_form" id="add_item_form" method="post" action="/add_item" class="input_form">
+        <div class="form-group">
+            <label>Date</label>
+            <input type="date" class="form-control" id="date">
+        </div>
+        <div class="form-group">
+            <label>Total</label>
+            <input type="price" class="form-control" id="total">
+        </div>
+        <div class="form-group">
+            <label>Employee ID</label>
+            <input type="id" class="form-control" id="e_id">
+            <div class="form-group">
+                <label>Store ID</label>
+                <input type="id" class="form-control" id="store_id">
+            </div>
+            <div class="form-group">
+                <label>Transaction ID</label>
+                <input type="id" class="form-control" id="item_id" placeholder="If Searching">
+            </div>
+            <button type="submit" id="add_item" class="btn btn-primary">Add</button>
+            <button type="submit" id="delete_item" class="btn btn-primary">Delete</button>
+            <button type="submit" id="search_item" class="btn btn-primary">Search</button>
+    </form>
+    <br>
+    <br>
+
+    <div class="form_container">
+        <form name="transactions_form" id="transactions_form" method="post" action="/update_transactions"
+            class="table_form">
+            <table class="db_table">
+                <thead>
+                    <tr>
+                        <th colspan="11">Transactions</th>
+                    </tr>
+                    <tr>
+                        <th></th>
+
+                        <th>t_id</th>
+
+                        <th>date</th>
+
+                        <th>total</th>
+
+                        <th>e_id</th>
+
+                        <th>store_id</th>
+
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="transactions_tbody">
+
+                    <tr id="transactions_row-0">
+                        <td>
+                            <button class="transactions_editBtn">edit</button>
+                        </td>
+
+
+                        <td id="t_id>0" class="attribute-container">1</td>
+
+                        <td id="date>0" class="attribute-container">5/6/2021</td>
+
+                        <td id="total>0" class="attribute-container">$20.50</td>
+
+                        <td id="e_id>0" class="attribute-container">1</td>
+
+                        <td id="store_id>0" class="attribute-container">1</td>
+
+                        <td>
+                            <button class="transactions_deleteBtn">X</button>
+                            <input type="hidden" ,="" value="0" name="id">
+                        </td>
+                    </tr>
+
+                    <tr id="transactions_row-1">
+                        <td>
+                            <button class="transactions_editBtn">edit</button>
+                        </td>
+
+
+                        <td id="t_id>0" class="attribute-container">2</td>
+
+                        <td id="date>0" class="attribute-container">5/20/2021</td>
+
+                        <td id="total>0" class="attribute-container">$51.25</td>
+
+                        <td id="e_id>0" class="attribute-container">3</td>
+
+                        <td id="store_id>0" class="attribute-container">2</td>
+
+                        <td>
+                            <button class="transactions_deleteBtn">X</button>
+                            <input type="hidden" ,="" value="0" name="id">
+                        </td>
+                    </tr>
+
+                    <tr id="transactions_row-3">
+                        <td>
+                            <button class="transactions_editBtn">edit</button>
+                        </td>
+
+
+                        <td id="t_id>0" class="attribute-container">3</td>
+
+                        <td id="date>0" class="attribute-container">5/21/2021</td>
+
+                        <td id="total>0" class="attribute-container">$30.25</td>
+
+                        <td id="e_id>0" class="attribute-container">4</td>
+
+                        <td id="store_id>0" class="attribute-container">1</td>
+
+                        <td>
+                            <button class="transactions_deleteBtn">X</button>
+                            <input type="hidden" ,="" value="0" name="id">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>
