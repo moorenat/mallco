@@ -1,3 +1,6 @@
-# CS290-Server-Side-Examples
+# MallCo
 
-This sample application requires the database dump **bsg_db.sql** to be setup *before* you can run the application. This is different from the database dump you used in other weeks of the CS340 class.
+This database driven web app was built as the portfolio project for my Databases course. Unfortunately this app is not currently hosted but I have provided the code for review. 
+
+## This was built with Node, Express, Handlebars, HTML, CSS and MySQL with MariaDB running on OSU's engineering servers. 
+
